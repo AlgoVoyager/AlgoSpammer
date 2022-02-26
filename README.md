@@ -1,7 +1,14 @@
 # AlgoSpammer
 python script to spam anywhere on pc
 
-**Using CMD is recommended.**
+Using CMD is recommended.
+
+Requirements :- 
+
+1 latest python
+
+2 pyautogui  `pip install pyautogui`
+
 
 ## Multiple Options like:
 
