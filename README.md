@@ -13,39 +13,41 @@ Requirements :-
 ## Multiple Options like:
 
 ### 1. If run without providing any arguments-
-`python AlgoSpammer`
+`python AlgoSpammer.py`
+
+this will click 'enter' infinite times untill you terminate program.
 
 ### 2. To spam only one word infinite times-
-`python Algospammer yourWord`
+`python Algospammer.py yourWord`
 
 ### 3. To spam yourWord given no. of times-
-`python Algospammer yourWord spamCount`
+`python Algospammer.py yourWord spamCount`
 
 *or*
 
-`python Algospammer yourWord 50`
+`python Algospammer.py yourWord 50`
 
 *this will spam the word "yourWord" 50 times.*
 
 ### 4. To use default text file to spam-
-`python Algospammer -uf`
+`python Algospammer.py -uf`
 
 *or*
 
-`python Algospammer -usefile`
+`python Algospammer.py -usefile`
 
 *this will read the default file in same directory to spam.*
 
 ### 5. To use custom text file to spam-
-`python Algospammer -uf custom_filename.extention`
+`python Algospammer.py -uf custom_filename.extention`
 
 *or*
 
-`python Algospammer -usefile custom_filename.extention`
+`python Algospammer.py -usefile custom_filename.extention`
 
 *must provide full filename with extention*
 
-`python Algospammer -uf custom.txt`
+`python Algospammer.py -uf custom.txt`
 
 
 ### more options to be added later...
