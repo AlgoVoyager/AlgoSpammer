@@ -11,7 +11,7 @@ Requirements :-
 
 
 ## Multiple Options like:
-
+####*the spam lies where the cursor is...*####
 ### 1. If run without providing any arguments-
 `python AlgoSpammer.py`
 
