@@ -38,7 +38,7 @@ this will click 'enter' infinite times untill you terminate program.
 
 *this will read the default file in same directory to spam.*
 
-*edit the default text file *
+  edit the default text file
 
 ### 5. To use custom text file to spam-
 `python Algospammer.py -uf custom_filename.extention`
@@ -52,7 +52,15 @@ this will click 'enter' infinite times untill you terminate program.
 `python Algospammer.py -uf custom.txt`
 
 
+### 6. To use any file to spam given number of times-
+`python Algospammer.py -uf filename.extention spamCount`
+
+ex-
+
+`python Algospammer.py -uf anyfile.txt 50`
+
+*this will read file and spam given no. of times*
+
 
 ### Upcoming features are coming soon, like-
 #### > take custom sentence as input, and their options like spam count etc.
-#### > more options for textfiles like spam count.
