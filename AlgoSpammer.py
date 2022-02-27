@@ -2,21 +2,22 @@ import sys,os
 import pyautogui as pg
 from time import sleep
 
-def start_art():
+def start_art(additional):
     art= """
     +-+-+-+-+-+-+-+-+-+-+-+
     |A|l|g|o|S|p|a|m|m|e|r|
     +-+-+-+-+-+-+-+-+-+-+-+
     """
-    print(art)
+    print(art+"\n"+ additional)
 
 try:
     input_word = sys.argv[1]
     if input_word =="-uf" or input_word=="-usefile":
         try:
             filename = sys.argv[2]
-            start_art()
-            print("using the custom text file "+filename+" to spam in 5 secs...\n press CTRL+C to terminate.\n")
+            
+            printtext="using the custom text file "+filename+" to spam in 5 secs...\n press CTRL+C to terminate.\n"
+            start_art(printtext)
             sleep(5)
             if os.path.isfile(filename):
                 custom_file = open(filename,"r")
@@ -30,8 +31,9 @@ try:
                 exit()
         except IndexError:
             filename= "spamtext.txt"
-            start_art()
-            print("using default spamtext file in 5 secs...\n press CTRL+C to terminate.\n")
+            
+            printtext="using default spamtext file in 5 secs...\n press CTRL+C to terminate.\n"
+            start_art(printtext)
             sleep(5)
             f= open(filename,"r")
             for line in f:
@@ -42,8 +44,9 @@ try:
     else:
         try:
             count = sys.argv[2]
-            start_art()
-            print("starting spamming \'"+input_word+"\' "+str(count)+" times"+" in 5 secs...\n press CTRL+C to terminate.\n")
+            
+            printtext="starting spamming \'"+input_word+"\' "+str(count)+" times"+" in 5 secs...\n press CTRL+C to terminate.\n"
+            start_art(printtext)
             sleep(5)
             for cnt in range(int(count)):
                 pg.typewrite(input_word)
@@ -52,8 +55,9 @@ try:
              
 
         except IndexError:
-            start_art()
-            print("starting spam \'"+input_word+"\' in 5 secs...\n press CTRL+C to terminate.\n")
+            
+            printtext="starting spam \'"+input_word+"\' in 5 secs...\n press CTRL+C to terminate.\n"
+            start_art(printtext)
             sleep(5)
             while True:
                 pg.typewrite(input_word)
@@ -61,8 +65,8 @@ try:
 
 except IndexError:
     counter =0
-    start_art()
-    print("starting autoclick enter in 5 secs...\n press CTRL+C to terminate.\n")
+    printtext="starting autoclick enter in 5 secs...\n press CTRL+C to terminate.\n"
+    start_art(printtext)
     sleep(5)
     #if no args
     while True:
